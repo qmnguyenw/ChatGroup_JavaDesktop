@@ -96,7 +96,7 @@ $ns at 15.0 "$ftp3 stop"
 
 
 #define procedure to plot the congestion window
-proc xgACK {tcpSource outfile} {
+proc xgACK1 {tcpSource outfile} {
    	global ns
    	set now [$ns now]
    	set tracevar [$tcpSource set cwnd_]
@@ -108,7 +108,7 @@ proc xgACK {tcpSource outfile} {
 set outfile [open  "graph.xg"  w]
 $ns  at  0.0  "xgACK $tcp1  $outfile"
 
-proc xgACK1 {tcpSource outfile} {
+proc xgACK {tcpSource outfile} {
    	global ns
    	set now [$ns now]
    	set tracevar [$tcpSource set ack_]
